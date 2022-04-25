@@ -44,13 +44,19 @@
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Time" FontSize="15" Labels="{Binding Path=LineChart.labels}"/>
             </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Value" FontSize="15"/>
+            </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
 
 
-        <lvc:CartesianChart Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="4" LegendLocation="Left" Series="{Binding Path=candlestickChart.SeriesCollection}">
+        <lvc:CartesianChart Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="4" LegendLocation="Right" Series="{Binding Path=candlestickChart.SeriesCollection}">
             <lvc:CartesianChart.AxisX>
-                <lvc:Axis Labels="{Binding Path=candlestickChart.labels}"/>
+                <lvc:Axis Title="Time" FontSize="15" Labels="{Binding Path=candlestickChart.labels}"/>
             </lvc:CartesianChart.AxisX>
+            <lvc:CartesianChart.AxisY>
+                <lvc:Axis Title="Value" FontSize="15"/>
+            </lvc:CartesianChart.AxisY>
         </lvc:CartesianChart>
         
     
