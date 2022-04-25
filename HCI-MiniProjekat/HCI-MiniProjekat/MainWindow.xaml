@@ -36,9 +36,9 @@
         </ComboBox>
 
             
-        <Button x:Name="btnDraw" Grid.Row="1" Grid.Column="4" Margin="8" Background="DarkCyan" Foreground="White" FontWeight="SemiBold" >Draw</Button>
-        <Button x:Name="btnClear" Grid.Row="1" Grid.Column="5" Margin="8" Width="50"  Background="DarkCyan" Foreground="White" FontWeight="SemiBold" >Clear</Button>
-        <Button x:Name="btnTable" Grid.Row="1" Grid.Column="6" Margin="8" Width="50"  Background="DarkCyan" Foreground="White" FontWeight="SemiBold" >Table</Button>
+        <Button x:Name="btnDraw" Grid.Row="1" Grid.Column="4" Margin="8" Background="DarkCyan" Foreground="White" FontWeight="SemiBold" Click="btnDraw_Click">Draw</Button>
+        <Button x:Name="btnClear" Grid.Row="1" Grid.Column="5" Margin="8" Width="50"  Background="DarkCyan" Foreground="White" FontWeight="SemiBold" Click="btnClear_Click">Clear</Button>
+        <Button x:Name="btnTable" Grid.Row="1" Grid.Column="6" Margin="8" Width="50"  Background="DarkCyan" Foreground="White" FontWeight="SemiBold" Click="btnTable_Click">Table</Button>
 
         <lvc:CartesianChart Series="{Binding Path=LineChart.SeriesCollection}" LegendLocation="Left" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3">
             <lvc:CartesianChart.AxisX>

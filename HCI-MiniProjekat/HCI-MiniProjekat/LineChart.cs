@@ -11,14 +11,14 @@ using System.Windows.Controls;
 
 namespace HCI_MiniProjekat
 {
-    public partial class LineChart : UserControl
+    public partial class LineChart:UserControl
     {
         public SeriesCollection SeriesCollection { get; set; }
         public List<string> labels { get; set; }
 
         public List<TimeSeries> chartValues { get; set; }
 
-        // public Func<double, string> YFormatter { get; set; }
+       // public Func<double, string> YFormatter { get; set; }
 
         public LineChart()
         {
@@ -29,10 +29,10 @@ namespace HCI_MiniProjekat
             DataContext = this;
         }
 
-        public void draw(List<TimeSeries> chartValues, string from, string to, string period, string atribute)
+        public void draw(List<TimeSeries> chartValues,string from,string to,string period,string atribute)
         {
             this.chartValues = chartValues;
-            if (period == "Intraday")
+            if(period == "Intraday")
             {
                 this.labels = this.chartValues.Select(x => x.timeStamp.ToString()).ToList();
             }
@@ -45,7 +45,7 @@ namespace HCI_MiniProjekat
 
             LineSeries lines = new LineSeries
             {
-                Title = from + "-" + to,
+                Title = from+"-"+to,
                 Values = values,
                 PointGeometry = null,
                 PointGeometrySize = 15
@@ -60,17 +60,16 @@ namespace HCI_MiniProjekat
             labels.Clear();
         }
 
-        public ChartValues<double> getValuesByAtribute(string atribute)
+        public ChartValues<double> getValuesByAtribute(string atribute) 
         {
-            if (atribute == "open")
+            if(atribute == "open")
             {
                 return new ChartValues<double>(chartValues.Select(x => x.open));
             }
-            else if (atribute == "close")
+            else if(atribute == "close")
             {
                 return new ChartValues<double>(chartValues.Select(x => x.close));
-            }
-            else if (atribute == "low")
+            }else if(atribute == "low")
             {
                 return new ChartValues<double>(chartValues.Select(x => x.low));
             }
@@ -80,7 +79,7 @@ namespace HCI_MiniProjekat
             }
 
             return null;
-
+            
         }
 
 

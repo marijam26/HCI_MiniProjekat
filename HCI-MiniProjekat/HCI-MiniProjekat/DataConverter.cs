@@ -66,12 +66,12 @@ namespace HCI_MiniProjekat
                     return chartValues;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 return null;
             }
-
+            
         }
     }
 
